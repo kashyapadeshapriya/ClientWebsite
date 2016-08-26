@@ -1,0 +1,146 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="loader">
+                <span class="loader-inner"></span>
+                <span class="loader-inner"></span>
+                <span class="loader-inner"></span>
+                <span class="loader-inner"></span>
+                <span class="loader-inner"></span>
+                <span class="loader-inner"></span>
+                <span class="loader-inner"></span>
+                <span class="loader-inner"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.loader{
+    width: 84px;
+    height: 84px;
+    margin: 40px auto;
+    position: relative;
+}
+.loader .loader-inner{
+    width: 35px;
+    height: 8px;
+    border-radius: 4px;
+    background: #b1eedb;
+    position: absolute;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+.loader .loader-inner:nth-of-type(4n - 3) {
+    left: 24.5px;
+    -webkit-animation-name: loading1;
+    animation-name: loading1;
+}
+.loader .loader-inner:nth-of-type(3) {
+    left: 2px;
+}
+.loader .loader-inner:nth-of-type(7) {
+    right: 2px;
+}
+.loader .loader-inner:nth-of-type(4n-1) {
+    top: 24.5px;
+    width: 8px;
+    height: 35px;
+    -webkit-animation-name: loading1;
+    animation-name: loading1;
+}
+.loader .loader-inner:nth-of-type(5) {
+    bottom: 0;
+}
+.loader .loader-inner:nth-of-type(4n - 2) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation-name: loading2;
+    animation-name: loading2;
+}
+.loader .loader-inner:nth-of-type(2) {
+    top: 12px;
+}
+.loader .loader-inner:nth-of-type(6) {
+    bottom: 12px;
+    right: 0;
+}
+.loader .loader-inner:nth-of-type(4n) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-animation-name: loading3;
+    animation-name: loading3;
+}
+.loader .loader-inner:nth-of-type(4) {
+    bottom: 12px;
+}
+.loader .loader-inner:nth-of-type(8) {
+    top: 12px;
+    right: 0;
+}
+@-webkit-keyframes loading1 {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading1 {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@-webkit-keyframes loading2 {
+    from {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    to {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+}
+@keyframes loading2 {
+    from {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    to {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+}
+@-webkit-keyframes loading3 {
+    from {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    to {
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+    }
+}
+@keyframes loading3 {
+    from {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    to {
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+    }
+}
+
+</style>

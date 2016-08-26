@@ -1,0 +1,472 @@
+<div style="height:50px;"></div>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<!--
+<div class="container">
+    <div class="fb-profile">
+        <img align="left" class="fb-image-lg" src="public/img/kess/coverPicture.jpg" alt="Profile image example"/>
+        <img align="left" class="fb-image-profile thumbnail" src="public/img/kess/profilePicture.jpg" alt="Profile image example"/>
+        <div class="fb-profile-text">
+            <h1>Salon Kess</h1>
+            <p>Making Words Into a Brand.</p>
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">SERVICES</a></li>
+        <li><a data-toggle="tab" href="#menu1">Salon KESS</a></li>
+        <li><a data-toggle="tab" href="#menu2">Hair Stylists</a></li>
+        <li><a data-toggle="tab" href="#menu3">Image gallery</a></li>
+    </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>
+-->
+
+
+<!--new profile check start-->
+
+<div class="container">
+    <div id="carousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img alt="Bootstrap template" src="public/img/profile/coverPicture4.jpg">
+                <div class="carousel-caption">
+                    <h3>Company information</h3>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Bootstrap template" src="public/img/profile/coverPicture2.jpg">
+                <div class="carousel-caption">
+                    <h1>About us</h1>
+                    <p>
+                       
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Bootstrap template" src="public/img/profile/coverPicture3.jpg">
+                <div class="carousel-caption">
+                    <h3>Portfolio</h3>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <ul class="nav nav-pills nav-justified">
+            <li data-target="#carousel1" data-slide-to="0" >
+                <a data-toggle="tab" href="#menu1">About Us<small>Who are we!</small></a>
+            </li>
+            <li data-target="#carousel1" data-slide-to="1">
+                <a data-toggle="tab" href="#menu2">Services<small>What we offer to you</small></a>
+            </li>
+            <li data-target="#carousel1" data-slide-to="2">
+                <a data-toggle="tab" href="#menu3">Hair Stylist<small>The gang who does the magic </small></a>
+            </li>
+            <li data-target="#carousel1" data-slide-to="2">
+                <a data-toggle="tab" href="#menu4">Image gallery<small>We share our moments with you </small></a>
+            </li>
+        </ul>
+<!--        Tab Content Start  ---------------------------->
+        <div class="tab-content">
+            <div id="menu1" class="tab-pane fade in active">
+<!--   about us start-->
+                <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h1 class="panel-title"><strong>New User ?? let's Sign Up! </strong></h1>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="email">First Name</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Last Name </label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password </label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Password" required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Confirm Password </label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Password" required="required"/>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-success">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>   
+                
+<!--   about us end  -->
+            </div>
+            <div id="menu2" class="tab-pane fade">
+<!--   Services start -->
+               <div  class="intro-header-offers">
+                   <div class="container" style="padding-top:100px;">
+                       <div class="row" ng-controller= "searchController as search"> 
+                        <ul style="list-style: none;">
+                          <li ng-repeat="service in search.services">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <a href="{{service.salonNameLink}}">
+                                        <img class="img-responsive" alt="Bootstrap template" src="http://placehold.it/600x200" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <h3>{{ service.Service  }}</h3>
+                                    <h3>{{ service.SalonName  }}</h3>
+                                    <p>{{ service.description  }}</p>
+                                    <p>{{ service.Price  }}</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Nam viverra euismod odio, gravida pellentesque urna varius vitae. 
+                                        Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. 
+                                        Mauris ultricies, justo eu convallis placerat, felis enim.
+                                    </p>
+                                    <p class="col-sm-3">
+                                        <a href="/profile" class="btn btn-primary" role="button">View Salon</a>
+                                        <!--                <a href="/booking" class="btn btn-default" role="button">Book Now</a>-->
+                                    </p> 
+                                </div>
+                            </div>
+                            <hr/>
+                         </li>
+                        </ul>
+                    </div>
+                   </div>
+                </div>
+<!--   Services  end  -->
+            </div>
+            <div id="menu3" class="tab-pane fade">
+              <h3>Menu 2</h3>
+<!--   Hair Stylists  start -->
+                
+                
+<!--   Hair stylists   end  -->
+            </div>
+            <div id="menu4" class="tab-pane fade">
+<!--   Image galery start-->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<section>
+  <div class="container gal-container">
+    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#1">
+          <img src="http://placemi.com/i3xhd/1000x750">
+        </a>
+        <div class="modal fade" id="1" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="http://placemi.com/i3xhd/1000x750">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the first one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#2">
+          <img src="http://placemi.com/gut3z/1000x750">
+        </a>
+        <div class="modal fade" id="2" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="http://placemi.com/gut3z/1000x750">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the second one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#3">
+          <img src="http://placemi.com/yggpo/1000x750">
+        </a>
+        <div class="modal fade" id="3" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="http://placemi.com/yggpo/1000x750">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the third one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#4">
+          <img src="http://placemi.com/49zqo/1000x750">
+        </a>
+        <div class="modal fade" id="4" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="http://placemi.com/49zqo/1000x750">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the fourth one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+/*@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);*/
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+.gal-container{
+	padding: 12px;
+}
+.gal-item{
+	overflow: hidden;
+	padding: 3px;
+}
+.gal-item .box{
+	height: 350px;
+	overflow: hidden;
+}
+.box img{
+	height: 100%;
+	width: 100%;
+	object-fit:cover;
+	-o-object-fit:cover;
+}
+.gal-item a:focus{
+	outline: none;
+}
+.gal-item a:after{
+	content:"\e003";
+	font-family: 'Glyphicons Halflings';
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	position: absolute;
+	right: 3px;
+	left: 3px;
+	top: 3px;
+	bottom: 3px;
+	text-align: center;
+    line-height: 350px;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.gal-item a:hover:after{
+	opacity: 1;
+}
+.modal-open .gal-container .modal{
+	background-color: rgba(0,0,0,0.4);
+}
+.modal-open .gal-item .modal-body{
+	padding: 0px;
+}
+.modal-open .gal-item button.close{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    opacity: 1;
+    color: #fff;
+    z-index: 999;
+    right: -12px;
+    top: -12px;
+    border-radius: 50%;
+    font-size: 15px;
+    border: 2px solid #fff;
+    line-height: 25px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+	box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+}
+.modal-open .gal-item button.close:focus{
+	outline: none;
+}
+.modal-open .gal-item button.close span{
+	position: relative;
+	top: -3px;
+	font-weight: lighter;
+	text-shadow:none;
+}
+.gal-container .modal-dialogue{
+	width: 80%;
+}
+.gal-container .description{
+	position: relative;
+	height: 40px;
+	top: -40px;
+	padding: 10px 25px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	text-align: left;
+}
+.gal-container .description h4{
+	margin:0px;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 20px;
+}
+.gal-container .modal.fade .modal-dialog {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 100px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.gal-container .modal.fade.in .modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+    opacity: 1;
+}
+@media (min-width: 768px) {
+.gal-container .modal-dialog {
+    width: 55%;
+    margin: 50 auto;
+}
+}
+@media (max-width: 768px) {
+    .gal-container .modal-content{
+        height:250px;
+    }
+}
+/* Footer Style */
+i.red{
+    color:#BC0213;
+}
+.gal-container{
+    padding-top :75px;
+    padding-bottom:75px;
+}
+footer{
+    font-family: 'Quicksand', sans-serif;
+}
+footer a,footer a:hover{
+    color: #88C425;
+}
+</style>
+<!--              Image galery end  -->
+            </div>
+        </div>
+<!--        Tab Content end  ---------------------------->
+    </div>
+</div>
+
+<!--<link rel="stylesheet" type="text/css" href="/Content/font-awesome/css/font-awesome.min.css" />-->
+
+<style>
+body {
+    padding-top: 20px;
+}
+#carousel1 .nav a small {
+    display: block;
+}
+#carousel1 .nav {
+    background: #eee;
+}
+.nav-justified > li > a {
+    border-radius: 0px;
+}
+.nav-pills > li[data-slide-to="0"].active a {
+    background-color: #b4d9a7;
+}
+.nav-pills > li[data-slide-to="1"].active a {
+    background-color: #4f77cb;
+}
+.nav-pills > li[data-slide-to="2"].active a {
+    background-color: #d11e4f;
+}
+</style>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('#carousel1').carousel({
+            interval: 2000
+        });
+
+        var clickEvent = false;
+
+        $('#carousel1').on('click', '.nav a', function () {
+            clickEvent = true;
+            $('.nav li').removeClass('active');
+            $(this).parent().addClass('active');
+        }).on('slid.bs.carousel', function (e) {
+            if (!clickEvent) {
+                var count = $('.nav').children().length - 1;
+                var current = $('.nav li.active');
+                current.removeClass('active').next().addClass('active');
+                var id = parseInt(current.data('slide-to'));
+                if (count == id) {
+                    $('.nav li').first().addClass('active');
+                }
+            }
+            clickEvent = false;
+        });
+    });
+</script>
+
+<!--new profile check end-->
+
+ 
+
+  
+
+

@@ -1,0 +1,102 @@
+<div  class="intro-header" ng-controller="subController as sub" >
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>We are your Beauty Partner</h1>
+                        <h3>Our responsibility is to find you the best beauty solution in the town </h3>
+                        
+                        <hr class="intro-divider">
+<!--
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <input class="main-input-box" ><input class="main-input-box" >
+                            </li>
+                            <li>
+                                <a class="btn btn-default btn-lg" href="/searchResults">
+                                <i class="glyphicon glyphicon-search fa-fw"></i> <span class="network-name"> Search </span></a>
+                            </li>
+                        </ul>
+-->
+                        <div class="row">
+<!--
+                          <div class="col-md-2">
+                          </div>
+-->
+                          <div class="col-md-4">
+                            <div class="input-group">
+                              <span class="input-group-addon">Area</span>
+                              <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="input-group">
+                              <span class="input-group-addon">Service</span>
+                              <input type="text" class="form-control" aria-label="Text input with radio button">
+                            </div>
+                          </div>
+                        
+                        <div class="col-md-4">
+                            <a class="btn btn-default btn-lg" href="/searchResults">
+                                <i class="glyphicon glyphicon-search fa-fw"></i> <span class="network-name"> Search </span>
+                            </a>
+                        </div>
+                        </div>
+<!--
+                        <div class="row" style="padding-top:50px;">
+                            
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<style>
+
+
+.search {
+	margin-top: -25%;
+}
+.search .form-section{
+	background:rgba(0,0,0,0.6);
+	border: 2px solid #414141;
+	border-radius: 5px;
+	padding: 10px;
+}
+    
+</style>
+
+<script>
+
+$(window).ready(function(){
+      var nowTemp = new Date();
+      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+      var checkin = $('#checkin').datepicker({
+        onRender: function(date) {
+          return date.valueOf() < now.valueOf() ? 'disabled' : '';
+        }
+      }).on('changeDate', function(ev) {
+        if (ev.date.valueOf() > checkout.date.valueOf()) {
+          var newDate = new Date(ev.date)
+          newDate.setDate(newDate.getDate() + 1);
+          checkout.setValue(newDate);
+        }
+        checkin.hide();
+        $('#checkout')[0].focus();
+      }).data('datepicker');
+      var checkout = $('#checkout').datepicker({
+        onRender: function(date) {
+          return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+        }
+      }).on('changeDate', function(ev) {
+        checkout.hide();
+      }).data('datepicker');
+    });
+
+
+</script>
